@@ -4,9 +4,9 @@ function ProjectList({ projects, onAddProject }) {
   const [newProjectName, setNewProjectName] = useState("");
 
   const handleAddProject = () => {
-    if (!newProjectName.trim()) {return;} // Prevent empty projects.
+    if (!newProjectName.trim()) {return} // Prevent empty projects.
 
-    onAddProject(newProjectName); // Send new project name to parent.
+    onAddProject(newProjectName); // Send new project name to parent. Since `onAddProject` is the name of the prop, it calls the function passed from the parent component.
     setNewProjectName(""); // Clear input after adding.
   };
 

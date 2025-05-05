@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import ProjectList from './ProjectList.jsx'
-import './App.css'
+import { useState } from "react";
+import Timer from "./Timer.jsx";
+import ProjectList from "./ProjectList.jsx";
+import "./App.css";
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -13,9 +14,10 @@ function App() {
     <div>
       <h1>Project Time Tracker</h1>
       <p>Track your projects with ease!</p>
-      <ProjectList projects={projects} onAddProject={handleAddProject}/>
+      <ProjectList projects={projects} onAddProject={handleAddProject} />
+      <Timer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
